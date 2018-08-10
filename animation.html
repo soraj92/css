@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mixin' CSS HTML</title>
+    <!--<link href="style.css" rel="stylesheet"> -->
+    <style>
+      .box {
+        width:500px;
+        height:500px;
+        background-color: red;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: 3s  scaleAndRotateSquare infinite ease-in-out;
+      }
+
+      @keyframes scaleAndRotateSquare {
+        0%{
+          transform:none;
+        }
+        50% {
+          transform: rotate(1turn) scale(.5,.5);
+          color:white;
+        }
+        100%{
+          transform:none;
+          color:blue;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      test
+    </div>
+  </body>
+</html>
